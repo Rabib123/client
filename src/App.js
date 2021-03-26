@@ -58,9 +58,10 @@ function Hookcounter() {
          if(inputbox.Trigger){
            
         
-         axios.post('https://rabibserver1.herokuapp.com/', inputbox)
+         axios.post('https://rabibserver1.herokuapp.com/project', inputbox)
 
          .then(res =>{
+              
              setValue(false);
              
          })
@@ -81,7 +82,7 @@ function Hookcounter() {
       const delete_image = (id) => {
           
 
-              axios.delete("https://rabibserver1.herokuapp.com/"+id)
+              axios.delete("https://rabibserver1.herokuapp.com/project/"+id)
               .then(res=> {console.log("Delete Done");
               restartproject(); }) 
               .catch(error=> console.log(error));
